@@ -66,6 +66,7 @@ export function CtaModal({ open, onClose }: CtaModalProps) {
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [phoneState, setPhoneState] = useState<"" | "valid" | "invalid">("");
   const overlayRef = useRef<HTMLDivElement>(null);
 
@@ -130,6 +131,7 @@ export function CtaModal({ open, onClose }: CtaModalProps) {
     if (Object.keys(errs).length) { setErrors(errs); return; }
 
     setSubmitting(true);
+    setSubmitError(null);
     try {
       await submitLead({
         data: {
@@ -145,10 +147,10 @@ export function CtaModal({ open, onClose }: CtaModalProps) {
       });
       setSubmitted(true);
       setTimeout(onClose, 3000);
-    } catch {
-      // Still show success — server may have saved the record
-      setSubmitted(true);
-      setTimeout(onClose, 3000);
+    } catch (err) {
+      console.error("CTA modal submission failed:", err);
+      const msg = err instanceof Error ? err.message : "Something went wrong. Please try again.";
+      setSubmitError(msg);
     } finally {
       setSubmitting(false);
     }
@@ -349,6 +351,11 @@ export function CtaModal({ open, onClose }: CtaModalProps) {
                 <Button type="submit" size="lg" className="w-full" disabled={submitting}>
                   {submitting ? "Sending…" : "Send enquiry"}
                 </Button>
+                {submitError && (
+                  <p className="mt-2 rounded-md bg-destructive/10 px-3 py-2 text-xs text-destructive">
+                    {submitError}
+                  </p>
+                )}
                 <p className="text-center text-[11px] text-muted-foreground">
                   By submitting you agree to our privacy policy. We don't share your data.
                 </p>

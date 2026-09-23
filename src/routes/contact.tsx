@@ -53,16 +53,35 @@ const trustPoints = [
   { icon: ShieldCheck, label: "Full EPR coverage",     sub: "Plastic · E-waste · Battery · Tyre" },
 ];
 
+const offices = [
+  {
+    tag: "Goa Office",
+    entity: "Trashworks Technologies Pvt. Ltd.",
+    lines: ["201 Shanta Building, 18th June Road,", "Panaji, Goa 403001"],
+    note: null as string | null,
+    mapUrl: "https://www.google.com/maps/place/Trashworks+Technologies+Pvt+Ltd/@15.2968078,73.9552618,17z/data=!3m1!4b1!4m6!3m5!1s0x3bbfb15d138030af:0x8f9454c60a08c40c!8m2!3d15.2968078!4d73.9578367!16s%2Fg%2F11w9s9n_yx?entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D",
+  },
+  {
+    tag: "Ahmedabad Office",
+    entity: "The Trash Company",
+    lines: ["B401, Lakeview Towers, Vastrapur,", "Ahmedabad, Gujarat 380015"],
+    note: "અમદાવાદ, ગુજરાતમાં પણ અમારી ઓફિસ છે — તમારો સંપર્ક કરવા અમે આતુર છીએ.",
+    mapUrl: "https://www.google.com/maps/place/The+Trash+Company/@23.0384171,72.3763663,12z/data=!4m10!1m2!2m1!1strash+co+ahehmdabad!3m6!1s0x395e84b6e4555555:0x487fbf83e51a169f!8m2!3d23.0384171!4d72.5288016!15sChJ0cmFzaCBjbyBhaG1lZGFiYWSSARh3YXN0ZV9tYW5hZ2VtZW50X3NlcnZpY2XgAQA!16s%2Fg%2F11w7fnb1jc?entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D",
+  },
+];
+
 function ContactPage() {
   const [sent, setSent] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [active, setActive] = useState<string | null>(null);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   async function submit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (!e.currentTarget.checkValidity()) return;
     const fd = new FormData(e.currentTarget);
     setSubmitting(true);
+    setSubmitError(null);
     try {
       await submitLead({
         data: {
@@ -79,8 +98,8 @@ function ContactPage() {
       setSent(true);
     } catch (err) {
       console.error("Form submission failed:", err);
-      // Still show success to the user — data may have been saved
-      setSent(true);
+      const msg = err instanceof Error ? err.message : "Something went wrong. Please try again.";
+      setSubmitError(msg);
     } finally {
       setSubmitting(false);
     }
@@ -272,10 +291,82 @@ function ContactPage() {
                         {submitting ? "Sending…" : <><span>Send enquiry</span> <ArrowRight className="size-4" /></>}
                       </Button>
                     </div>
+                    {submitError && (
+                      <p className="mt-3 rounded-md bg-destructive/10 px-3 py-2 text-xs text-destructive">
+                        {submitError}
+                      </p>
+                    )}
                   </form>
                 )}
               </div>
             </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* TWO OFFICES — Goa & Ahmedabad (dark) */}
+      <section className="relative overflow-hidden bg-dark text-dark-foreground">
+        {/* decorative grid lines, same treatment as the homepage CTA */}
+        <div className="pointer-events-none absolute inset-0 grid-lines opacity-10" aria-hidden="true" />
+        <div className="pointer-events-none absolute -left-10 -top-16 select-none font-display text-[18rem] font-extrabold leading-none text-dark-foreground/[0.03] sm:text-[24rem]" aria-hidden="true">
+          ⌖
+        </div>
+
+        <div className="site-container relative z-10 section-pad">
+          <Reveal className="mb-10 sm:mb-14">
+            <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-primary">Where we are</p>
+            <h2 className="mt-2 font-display text-3xl font-extrabold sm:text-4xl lg:text-5xl">
+              Two offices.{" "}
+              <Highlighter action="underline" color="oklch(0.71 0.17 138)" strokeWidth={2.5} animationDuration={800} isView drawDelay={900}>
+                One mission.
+              </Highlighter>
+            </h2>
+            <p className="mt-3 max-w-xl text-sm leading-6 text-dark-muted sm:text-base sm:leading-7">
+              the trash co. operates out of Goa and Ahmedabad, serving businesses across all 26 states of India.
+            </p>
+          </Reveal>
+
+          <div className="grid gap-5 sm:grid-cols-2 sm:gap-6">
+            {offices.map(({ tag, entity, lines, note, mapUrl }, i) => (
+              <Reveal
+                key={tag}
+                delay={i * 100}
+                className="rounded-2xl border border-dark-foreground/15 bg-dark-foreground/[0.03] p-6 backdrop-blur-xl sm:rounded-3xl sm:p-8"
+              >
+                <a
+                  href={mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block"
+                  aria-label={`Open ${entity} on Google Maps`}
+                >
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-xl border border-dark-foreground/20 text-primary transition-colors group-hover:border-primary/60 group-hover:bg-primary/10 sm:size-12">
+                    <MapPin className="size-5" />
+                  </span>
+                  <div>
+                    <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-primary sm:text-xs">{tag}</p>
+                    <h3 className="font-display text-lg font-bold sm:text-xl">{entity}</h3>
+                  </div>
+                </div>
+
+                <p className="mt-5 text-sm leading-6 text-dark-muted transition-colors group-hover:text-dark-foreground sm:text-base">
+                  {lines.map((line, idx) => (
+                    <span key={idx}>
+                      {line}
+                      {idx < lines.length - 1 && <br />}
+                    </span>
+                  ))}
+                </p>
+                </a>
+
+                {note && (
+                  <p className="mt-5 border-t border-dark-foreground/15 pt-5 text-sm font-medium leading-6 text-primary">
+                    {note}
+                  </p>
+                )}
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>

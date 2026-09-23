@@ -126,39 +126,51 @@ export function SiteFooter() {
           <div className="flex flex-col gap-5">
 
             {/* Office 1 */}
-            <div className="flex gap-3">
-              <span className="mt-0.5 grid size-7 shrink-0 place-items-center rounded-full border border-dark-foreground/20">
+            <a
+              href="https://www.google.com/maps/place/Trashworks+Technologies+Pvt+Ltd/@15.2968078,73.9552618,17z/data=!3m1!4b1!4m6!3m5!1s0x3bbfb15d138030af:0x8f9454c60a08c40c!8m2!3d15.2968078!4d73.9578367!16s%2Fg%2F11w9s9n_yx?entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex gap-3"
+              aria-label="Trashworks Technologies — open in Google Maps"
+            >
+              <span className="mt-0.5 grid size-7 shrink-0 place-items-center rounded-full border border-dark-foreground/20 transition-colors group-hover:border-primary/60 group-hover:bg-primary/10">
                 <MapPin className="size-3.5 text-primary" />
               </span>
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.1em] text-dark-foreground">
+                <p className="text-xs font-bold uppercase tracking-[0.1em] text-dark-foreground transition-colors group-hover:text-primary">
                   Trashworks Technologies Pvt. Ltd.
                 </p>
-                <p className="mt-1 text-xs leading-5 text-dark-muted">
+                <p className="mt-1 text-xs leading-5 text-dark-muted transition-colors group-hover:text-dark-foreground">
                   201 Shanta Building, 18th June Road,<br />
                   Panaji, Goa 403001
                 </p>
               </div>
-            </div>
+            </a>
 
             {/* Divider */}
             <div className="h-px bg-dark-foreground/10" />
 
             {/* Office 2 */}
-            <div className="flex gap-3">
-              <span className="mt-0.5 grid size-7 shrink-0 place-items-center rounded-full border border-dark-foreground/20">
+            <a
+              href="https://www.google.com/maps/place/The+Trash+Company/@23.0384171,72.3763663,12z/data=!4m10!1m2!2m1!1strash+co+ahehmdabad!3m6!1s0x395e84b6e4555555:0x487fbf83e51a169f!8m2!3d23.0384171!4d72.5288016!15sChJ0cmFzaCBjbyBhaG1lZGFiYWSSARh3YXN0ZV9tYW5hZ2VtZW50X3NlcnZpY2XgAQA!16s%2Fg%2F11w7fnb1jc?entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex gap-3"
+              aria-label="The Trash Company Ahmedabad — open in Google Maps"
+            >
+              <span className="mt-0.5 grid size-7 shrink-0 place-items-center rounded-full border border-dark-foreground/20 transition-colors group-hover:border-primary/60 group-hover:bg-primary/10">
                 <MapPin className="size-3.5 text-primary" />
               </span>
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.1em] text-dark-foreground">
+                <p className="text-xs font-bold uppercase tracking-[0.1em] text-dark-foreground transition-colors group-hover:text-primary">
                   The Trash Company
                 </p>
-                <p className="mt-1 text-xs leading-5 text-dark-muted">
+                <p className="mt-1 text-xs leading-5 text-dark-muted transition-colors group-hover:text-dark-foreground">
                   B401, Lakeview Towers, Vastrapur,<br />
                   Ahmedabad, Gujarat 380015
                 </p>
               </div>
-            </div>
+            </a>
 
             {/* Divider */}
             <div className="h-px bg-dark-foreground/10" />
