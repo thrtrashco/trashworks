@@ -75,7 +75,7 @@ export function SiteFooter() {
               hello@thetrash.company
             </a>
             <a
-              href="tel:+918275073790"
+              href="tel:+918459830559"
               className="group inline-flex items-center gap-2.5 text-sm text-dark-muted transition-colors hover:text-dark-foreground"
             >
               <span className="grid size-7 shrink-0 place-items-center rounded-full border border-dark-foreground/20 transition-colors group-hover:border-primary group-hover:bg-primary/10">

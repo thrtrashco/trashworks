@@ -178,11 +178,11 @@ function ContactPage() {
                     team@thetrash.company
                   </a>
                   <a
-                    href="tel:+918275073790"
+                    href="tel:+918459830559"
                     className="flex items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
                   >
                     <Phone className="size-4 shrink-0 text-primary-dark" />
-                    +91 82750 73790
+                    +91 84598 30559
                   </a>
                 </div>
                 <div className="mt-5 flex gap-3 border-t border-light-border pt-5">
