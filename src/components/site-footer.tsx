@@ -81,7 +81,7 @@ export function SiteFooter() {
               <span className="grid size-7 shrink-0 place-items-center rounded-full border border-dark-foreground/20 transition-colors group-hover:border-primary group-hover:bg-primary/10">
                 <Phone className="size-3.5 text-primary" />
               </span>
-              +91 82750 73790
+              +91 84598 30559
             </a>
           </div>
         </div>
@@ -178,11 +178,11 @@ export function SiteFooter() {
             {/* Phone + Email row */}
             <div className="flex flex-wrap gap-4">
               <a
-                href="tel:+918275073790"
+                href="tel:+918459830559"
                 className="inline-flex items-center gap-1.5 text-xs text-dark-muted transition-colors hover:text-primary"
               >
                 <Phone className="size-3.5 text-primary" />
-                +91 82750 73790
+                +91 84598 30559
               </a>
               <a
                 href="mailto:hello@thetrash.company"
