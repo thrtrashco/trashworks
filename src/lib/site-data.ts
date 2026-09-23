@@ -5,24 +5,23 @@ export const navLinks = [
   { label: "About Us", to: "/about" },
   { label: "Services", to: "/services" },
   { label: "Recycled Polymers", to: "/recycled-polymers" },
-  { label: "Our Work", to: "/our-work" },
-  { label: "Blog", to: "/blog" },
+  { label: "Contact", to: "/contact" },
 ] as const;
 
 export const stats = [
   { value: 400, suffix: "+", label: "Customers delighted" },
   { value: 50000, suffix: "+", label: "Tons of trash channelised" },
   { value: 10, suffix: "+", label: "Years of relevant experience" },
-  { value: 26, suffix: "", label: "States & UTs presence" },
+  { value: 26, suffix: "+", label: "States & UTs presence" },
 ];
 
 export const services = [
-  { title: "Plastic Packaging EPR", short: "Plastic", description: "Compliance for producers, importers and brand owners using plastic packaging.", icon: Recycle },
-  { title: "Battery EPR", short: "Battery", description: "Registration and fulfilment support across portable, automotive, industrial and EV batteries.", icon: BatteryCharging },
-  { title: "E-Waste EPR", short: "E-waste", description: "Obligation mapping and documentation for electrical and electronic equipment.", icon: Cog },
-  { title: "Tyre EPR", short: "Tyres", description: "Traceable recycling pathways for all tyre categories in an environmentally safe manner.", icon: CircleGauge },
-  { title: "EPR Credits", short: "Credits", description: "Verified credit procurement with transparent documentation and audit-ready trails.", icon: FileCheck2 },
-  { title: "Environmental Services", short: "Environment", description: "Environmental advisory, waste management and other regulatory compliances.", icon: ShieldCheck },
+  { title: "Plastic Packaging EPR", short: "Plastic", description: "Compliance for producers, importers and brand owners using plastic packaging.", icon: Recycle, image: "/images/services/plastic-packaging.jpg" },
+  { title: "Battery EPR", short: "Battery", description: "Registration and fulfilment support across portable, automotive, industrial and EV batteries.", icon: BatteryCharging, image: "/images/services/battery.jpg" },
+  { title: "E-Waste EPR", short: "E-waste", description: "Obligation mapping and documentation for electrical and electronic equipment.", icon: Cog, image: "/images/services/ewaste.jpg" },
+  { title: "Tyre EPR", short: "Tyres", description: "Traceable recycling pathways for all tyre categories in an environmentally safe manner.", icon: CircleGauge, image: "/images/services/tyre.jpg" },
+  { title: "EPR Credits", short: "Credits", description: "Verified credit procurement with transparent documentation and audit-ready trails.", icon: FileCheck2, image: "/images/services/epr-credits.jpg" },
+  { title: "Environmental Services", short: "Environment", description: "Environmental advisory, waste management and other regulatory compliances.", icon: ShieldCheck, image: "/images/services/environmental.jpg" },
 ];
 
 export const polymers = [

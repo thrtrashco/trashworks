@@ -12,7 +12,7 @@ Stats to showcase (animated counters):
 - 400+ Customers Delighted
 - 50,000+ Tons of Trash Channelised
 - 10+ Years of Relevant Experience
-- 26 States & UTs Presence
+- 26+ States & UTs Presence
 
 Core Values (5): Customer Excellence, Integrity, Trust, Reliability, Transparency
 

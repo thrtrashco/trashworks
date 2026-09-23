@@ -79,22 +79,106 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "the trash co. | Circular Economy & EPR Compliance" },
-      { name: "description", content: "Tech-enabled EPR compliance and recycled polymer solutions for businesses across India." },
+      { title: "the trash co. | EPR Compliance & Circular Economy Partner, Goa" },
+      { name: "description", content: "Goa-based EPR compliance and circular economy company serving businesses across India. Plastic, battery, e-waste & tyre EPR — 400+ clients, 26 states." },
       { name: "author", content: "the trash co." },
+      { name: "keywords", content: "EPR compliance India, extended producer responsibility, circular economy company India, plastic waste management, EPR credits, EPR compliance company Goa, circular economy company Goa, waste management company Goa, recycled polymers supplier Goa, CPCB EPR portal, PIBO compliance" },
+      { name: "robots", content: "index, follow" },
+      { name: "theme-color", content: "#1a1a1a" },
+      /* Open Graph */
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "the trash co." },
+      { property: "og:locale", content: "en_IN" },
+      { property: "og:image", content: "https://res.cloudinary.com/drvug594q/image/upload/v1790112161/copy_of_logotc_qumlil.png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "the trash co. — EPR Compliance & Circular Economy" },
+      /* Twitter */
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:site", content: "@thetrashco" },
+      { name: "twitter:image", content: "https://res.cloudinary.com/drvug594q/image/upload/v1790112161/copy_of_logotc_qumlil.png" },
+      /* Geo / Local */
+      { name: "geo.region", content: "IN-GA" },
+      { name: "geo.placename", content: "Panaji, Goa, India" },
+      { name: "geo.position", content: "15.4909;73.8278" },
+      { name: "ICBM", content: "15.4909, 73.8278" },
     ],
     links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
+      { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" },
-      { rel: "icon", href: "/favicon.png", type: "image/png" },
+      { rel: "icon", href: "https://res.cloudinary.com/drvug594q/image/upload/v1790112161/copy_of_logotc_qumlil.png", type: "image/png" },
+      { rel: "canonical", href: "https://thetrash.company" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://thetrash.company/#organization",
+              "name": "the trash co.",
+              "legalName": "Trashworks Technologies Private Limited",
+              "url": "https://thetrash.company",
+              "logo": "https://res.cloudinary.com/drvug594q/image/upload/v1790112161/copy_of_logotc_qumlil.png",
+              "foundingDate": "2020",
+              "description": "Tech-enabled EPR compliance, plastic waste channelisation and recycled PCR polymers for Indian businesses.",
+              "email": "hello@thetrash.company",
+              "telephone": "+91-8275073790",
+              "areaServed": { "@type": "Country", "name": "India" },
+              "address": [
+                {
+                  "@type": "PostalAddress",
+                  "streetAddress": "201 Shanta Building, 18th June Road",
+                  "addressLocality": "Panaji",
+                  "addressRegion": "Goa",
+                  "postalCode": "403001",
+                  "addressCountry": "IN"
+                },
+                {
+                  "@type": "PostalAddress",
+                  "streetAddress": "B401, Lakeview Towers, Vastrapur",
+                  "addressLocality": "Ahmedabad",
+                  "addressRegion": "Gujarat",
+                  "postalCode": "380015",
+                  "addressCountry": "IN"
+                }
+              ],
+              "sameAs": ["https://thetrash.co.in"]
+            },
+            {
+              "@type": "LocalBusiness",
+              "@id": "https://thetrash.company/#localbusiness",
+              "name": "the trash co.",
+              "image": "https://res.cloudinary.com/drvug594q/image/upload/v1790112161/copy_of_logotc_qumlil.png",
+              "url": "https://thetrash.company",
+              "telephone": "+91-8275073790",
+              "email": "hello@thetrash.company",
+              "priceRange": "₹₹",
+              "currenciesAccepted": "INR",
+              "openingHours": "Mo-Fr 09:00-18:00",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "201 Shanta Building, 18th June Road",
+                "addressLocality": "Panaji",
+                "addressRegion": "Goa",
+                "postalCode": "403001",
+                "addressCountry": "IN"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 15.4909,
+                "longitude": 73.8278
+              },
+              "hasMap": "https://maps.google.com/?q=Panaji,Goa,India"
+            }
+          ]
+        })
+      }
+    ]
   }),
   shellComponent: RootShell,
   component: RootComponent,
