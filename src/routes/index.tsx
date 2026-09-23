@@ -49,7 +49,7 @@ function HomePage() {
         <div className="absolute inset-0 z-[1] bg-dark/60" />
 
         <div className="site-container relative z-10 grid items-end gap-6 pt-6 sm:gap-12 sm:pt-10 lg:pt-20">
-          <Reveal>
+          <div>
             <p className="mb-4 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.16em] text-primary sm:mb-7 sm:text-xs sm:tracking-[0.18em]">
               <Asterisk className="size-3.5 sm:size-4" /> India's circular economy partner
             </p>
@@ -61,7 +61,7 @@ function HomePage() {
             <p className="mt-5 max-w-xl text-sm leading-6 text-dark-muted sm:mt-10 sm:text-lg sm:leading-8">
               We connect regulation, recovery and recycled materials to make circularity work for Indian business.
             </p>
-          </Reveal>
+          </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 z-10 h-px bg-dark-foreground/10" />
       </section>

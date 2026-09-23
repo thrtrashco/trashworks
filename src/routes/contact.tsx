@@ -95,25 +95,24 @@ function ContactPage() {
           alt=""
           aria-hidden="true"
           loading="eager"
+          fetchPriority="high"
           className="absolute inset-0 z-0 h-full w-full object-cover opacity-40"
         />
         <div className="absolute inset-0 z-[1] bg-dark/60" />
         <div className="site-container relative z-10 pb-2">
-          <Reveal>
-            <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.16em] text-primary sm:mb-7 sm:text-xs sm:tracking-[0.18em]">
-              Contact
-            </p>
-            <h1 className="font-display text-[clamp(2.4rem,10vw,6rem)] font-extrabold leading-[0.9] tracking-normal sm:leading-[0.82]">
-              Let's turn{" "}
-              <Highlighter action="underline" color="oklch(0.71 0.17 138)" strokeWidth={2.5} animationDuration={800} isView drawDelay={900}>
-                responsibility
-              </Highlighter>
-              <br className="hidden sm:block" /> into momentum.
-            </h1>
-            <p className="mt-5 max-w-xl text-sm leading-6 text-dark-muted sm:mt-8 sm:text-lg sm:leading-8">
-              Tell us where your compliance or materials challenge stands. Our team will help define the next practical step.
-            </p>
-          </Reveal>
+          <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.16em] text-primary sm:mb-7 sm:text-xs sm:tracking-[0.18em]">
+            Contact
+          </p>
+          <h1 className="font-display text-[clamp(2.4rem,10vw,6rem)] font-extrabold leading-[0.9] tracking-normal sm:leading-[0.82]">
+            Let's turn{" "}
+            <Highlighter action="underline" color="oklch(0.71 0.17 138)" strokeWidth={2.5} animationDuration={800} isView drawDelay={200}>
+              responsibility
+            </Highlighter>
+            <br className="hidden sm:block" /> into momentum.
+          </h1>
+          <p className="mt-5 max-w-xl text-sm leading-6 text-dark-muted sm:mt-8 sm:text-lg sm:leading-8">
+            Tell us where your compliance or materials challenge stands. Our team will help define the next practical step.
+          </p>
         </div>
         <div className="absolute bottom-0 left-0 right-0 z-10 h-px bg-dark-foreground/10" />
       </section>
