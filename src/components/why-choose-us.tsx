@@ -49,7 +49,7 @@ export function WhyChooseUs() {
               </p>
               <h2 className="font-display text-2xl font-bold leading-tight sm:text-3xl md:text-4xl lg:text-5xl">
                 Why{" "}
-                <Highlighter action="underline" color="oklch(0.71 0.17 138)" strokeWidth={2.5} animationDuration={800} isView>
+                <Highlighter action="underline" color="oklch(0.71 0.17 138)" strokeWidth={2.5} animationDuration={800} isView drawDelay={900}>
                   choose the trash co.
                 </Highlighter>
               </h2>

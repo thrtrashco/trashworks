@@ -6,6 +6,7 @@ import { SectionHeading } from "@/components/section-heading";
 import { StatCounter } from "@/components/stat-counter";
 import { ServicesShowcase } from "@/components/services-showcase";
 import { QualityShowcase } from "@/components/quality-showcase";
+import { Preloader } from "@/components/preloader";
 import { CoreValuesEpr } from "@/components/core-values-epr";
 import { TrustBar } from "@/components/trust-bar";
 import { services, stats, testimonials } from "@/lib/site-data";
@@ -34,15 +35,16 @@ export const Route = createFileRoute("/")({
 function HomePage() {
   return (
     <main>
+      <Preloader />
       {/* HERO */}
       <section className="relative flex min-h-[100svh] flex-col justify-end overflow-hidden bg-dark pb-12 pt-24 text-dark-foreground sm:min-h-[700px] sm:pb-20 sm:pt-32 lg:min-h-[820px] lg:block lg:justify-normal">
         {/* Desktop video */}
-        <video autoPlay muted loop playsInline className="absolute inset-0 z-0 hidden h-full w-full object-cover opacity-30 sm:block">
-          <source src="https://res.cloudinary.com/drvug594q/video/upload/v1790108289/HERO_sjsvhx.mp4" type="video/mp4" />
+        <video autoPlay muted loop playsInline preload="auto" className="absolute inset-0 z-0 hidden h-full w-full object-cover opacity-30 sm:block">
+          <source src="https://res.cloudinary.com/drvug594q/video/upload/q_auto,vc_auto/v1790108289/HERO_sjsvhx.mp4" type="video/mp4" />
         </video>
         {/* Mobile video */}
-        <video autoPlay muted loop playsInline className="absolute inset-0 z-0 h-full w-full object-cover opacity-30 sm:hidden">
-          <source src="https://res.cloudinary.com/drvug594q/video/upload/v1790108346/Change_video_dimensions_1080p_20260923014652_zdbtsa.mp4" type="video/mp4" />
+        <video autoPlay muted loop playsInline preload="auto" className="absolute inset-0 z-0 h-full w-full object-cover opacity-30 sm:hidden">
+          <source src="https://res.cloudinary.com/drvug594q/video/upload/q_auto,vc_auto/v1790108346/Change_video_dimensions_1080p_20260923014652_zdbtsa.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 z-[1] bg-dark/60" />
 
@@ -72,7 +74,7 @@ function HomePage() {
               <SectionHeading
                 eyebrow="Impact in motion"
                 title="Waste is not the end of the line."
-                titleNode={<>Waste is not <Highlighter action="underline" color="oklch(0.71 0.17 138)" strokeWidth={2.5} animationDuration={800} isView>the end</Highlighter> of the line.</>}
+                titleNode={<>Waste is not <Highlighter action="underline" color="oklch(0.71 0.17 138)" strokeWidth={2.5} animationDuration={800} isView drawDelay={900}>the end</Highlighter> of the line.</>}
               />
               <p className="max-w-xl text-sm leading-6 text-muted-foreground sm:text-lg sm:leading-7 lg:self-end lg:text-xl lg:leading-8">
                 It is a measurable material stream, a compliance responsibility and—managed well—a source of value. We build the systems that connect all three.
@@ -110,7 +112,7 @@ function HomePage() {
             <SectionHeading
               eyebrow="Trusted relationships"
               title="Compliance feels simpler with the right team."
-              titleNode={<>Compliance feels <Highlighter action="underline" color="oklch(0.71 0.17 138)" strokeWidth={2.5} animationDuration={800} isView>simpler</Highlighter> with the right team.</>}
+              titleNode={<>Compliance feels <Highlighter action="underline" color="oklch(0.71 0.17 138)" strokeWidth={2.5} animationDuration={800} isView drawDelay={900}>simpler</Highlighter> with the right team.</>}
             />
           </Reveal>
           <p className="mt-4 text-[11px] text-muted-foreground sm:mt-5 sm:text-xs">Representative client feedback, paraphrased for clarity.</p>
@@ -174,7 +176,7 @@ function HomePage() {
               </p>
               <h2 className="mt-4 font-display text-4xl font-extrabold leading-[0.95] sm:text-6xl lg:text-7xl">
                 Turn your obligations into{" "}
-                <Highlighter action="underline" color="oklch(0.16 0.02 130)" strokeWidth={3} animationDuration={800} isView>
+                <Highlighter action="underline" color="oklch(0.16 0.02 130)" strokeWidth={3} animationDuration={800} isView drawDelay={900}>
                   forward motion.
                 </Highlighter>
               </h2>

@@ -170,8 +170,14 @@
 @utility site-container { width: min(100% - 2rem, 78rem); margin-inline: auto; }
 @utility section-pad { padding-block: clamp(5rem, 10vw, 8.5rem); }
 @utility grid-lines { background-image: linear-gradient(to right, color-mix(in oklab, var(--color-dark-foreground) 7%, transparent) 1px, transparent 1px), linear-gradient(to bottom, color-mix(in oklab, var(--color-dark-foreground) 7%, transparent) 1px, transparent 1px); background-size: 56px 56px; }
-@utility reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
-@utility reveal-visible { opacity: 1; transform: translateY(0); }
+@utility reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1), transform 0.75s cubic-bezier(0.22,1,0.36,1); }
+@utility reveal-visible { opacity: 1; transform: none !important; }
+
+/* Directional variants — apply alongside `reveal` */
+@utility reveal-left  { transform: translateX(-36px); }
+@utility reveal-right { transform: translateX(36px); }
+@utility reveal-scale { transform: scale(0.92); }
+@utility reveal-blur  { opacity: 0; filter: blur(8px); transform: translateY(16px); transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1), filter 0.8s cubic-bezier(0.22,1,0.36,1); }
 @utility marquee-track { width: max-content; animation: marquee 34s linear infinite; }
 @utility glass-nav { background: color-mix(in oklab, var(--color-background) 88%, transparent); backdrop-filter: blur(18px) saturate(135%); }
 
@@ -179,5 +185,5 @@
 @keyframes orbit { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-  .reveal { opacity: 1; transform: none; }
+  .reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-blur { opacity: 1; transform: none; filter: none; }
 }

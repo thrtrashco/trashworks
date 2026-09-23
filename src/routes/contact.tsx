@@ -105,7 +105,7 @@ function ContactPage() {
             </p>
             <h1 className="font-display text-[clamp(2.4rem,10vw,6rem)] font-extrabold leading-[0.9] tracking-normal sm:leading-[0.82]">
               Let's turn{" "}
-              <Highlighter action="underline" color="oklch(0.71 0.17 138)" strokeWidth={2.5} animationDuration={800} isView>
+              <Highlighter action="underline" color="oklch(0.71 0.17 138)" strokeWidth={2.5} animationDuration={800} isView drawDelay={900}>
                 responsibility
               </Highlighter>
               <br className="hidden sm:block" /> into momentum.
@@ -200,7 +200,7 @@ function ContactPage() {
                   <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-primary">Start a conversation</p>
                   <h2 className="mt-1 font-display text-2xl font-bold sm:text-3xl">
                     Tell us about{" "}
-                    <Highlighter action="underline" color="oklch(0.71 0.17 138)" strokeWidth={2.5} animationDuration={800} isView>
+                    <Highlighter action="underline" color="oklch(0.71 0.17 138)" strokeWidth={2.5} animationDuration={800} isView drawDelay={900}>
                       your challenge.
                     </Highlighter>
                   </h2>

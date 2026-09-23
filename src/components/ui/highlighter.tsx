@@ -25,6 +25,8 @@ interface HighlighterProps {
   padding?: number
   multiline?: boolean
   isView?: boolean
+  /** Extra delay (ms) before drawing — use to wait for a parent scroll-reveal animation to finish */
+  drawDelay?: number
 }
 
 export function Highlighter({
@@ -37,12 +39,15 @@ export function Highlighter({
   padding = 2,
   multiline = true,
   isView = false,
+  drawDelay = 0,
 }: HighlighterProps) {
   const elementRef = useRef<HTMLSpanElement>(null)
 
   const isInView = useInView(elementRef, {
     once: true,
-    margin: "-10%",
+    // Use a positive margin so we only trigger once the element is well into view,
+    // giving the parent Reveal animation time to start before we draw.
+    margin: "0px 0px -60px 0px",
   })
 
   // If isView is false, always show. If isView is true, wait for inView
@@ -52,6 +57,7 @@ export function Highlighter({
     const element = elementRef.current
     let annotation: RoughAnnotation | null = null
     let resizeObserver: ResizeObserver | null = null
+    let timer: ReturnType<typeof setTimeout> | null = null
 
     if (shouldShow && element) {
       const annotationConfig = {
@@ -66,22 +72,24 @@ export function Highlighter({
 
       const currentAnnotation = annotate(element, annotationConfig)
       annotation = currentAnnotation
-      currentAnnotation.show()
 
-      resizeObserver = new ResizeObserver(() => {
-        currentAnnotation.hide()
+      // Defer drawing by drawDelay so the parent reveal animation finishes first
+      timer = setTimeout(() => {
         currentAnnotation.show()
-      })
 
-      resizeObserver.observe(element)
-      resizeObserver.observe(document.body)
+        resizeObserver = new ResizeObserver(() => {
+          currentAnnotation.hide()
+          currentAnnotation.show()
+        })
+        resizeObserver.observe(element)
+        resizeObserver.observe(document.body)
+      }, drawDelay)
     }
 
     return () => {
+      if (timer) clearTimeout(timer)
       annotation?.remove()
-      if (resizeObserver) {
-        resizeObserver.disconnect()
-      }
+      if (resizeObserver) resizeObserver.disconnect()
     }
   }, [
     shouldShow,
@@ -92,6 +100,7 @@ export function Highlighter({
     iterations,
     padding,
     multiline,
+    drawDelay,
   ])
 
   return (

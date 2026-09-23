@@ -29,7 +29,7 @@ export function QualityShowcase() {
               </p>
               <h2 className="font-display text-2xl font-extrabold leading-[1.1] sm:text-5xl sm:leading-[1.05]">
                 Committed to quality,{" "}
-                <Highlighter action="underline" color="oklch(0.71 0.17 138)" strokeWidth={2.5} animationDuration={800} isView>
+                <Highlighter action="underline" color="oklch(0.71 0.17 138)" strokeWidth={2.5} animationDuration={800} isView drawDelay={900}>
                   batch after batch.
                 </Highlighter>
               </h2>

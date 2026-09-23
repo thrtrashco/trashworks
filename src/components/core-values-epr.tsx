@@ -54,7 +54,7 @@ export function CoreValuesEpr() {
               </p>
               <h2 className="font-display text-3xl font-bold leading-[1.05] sm:text-5xl">
                 Core{" "}
-                <Highlighter action="underline" color="oklch(0.71 0.17 138)" strokeWidth={2.5} animationDuration={800} isView>
+                <Highlighter action="underline" color="oklch(0.71 0.17 138)" strokeWidth={2.5} animationDuration={800} isView drawDelay={900}>
                   Values
                 </Highlighter>
               </h2>
@@ -128,7 +128,7 @@ export function CoreValuesEpr() {
               </p>
               <h2 className="font-display text-3xl font-bold leading-[1.05] sm:text-5xl">
                 EPR — compliance turned{" "}
-                <Highlighter action="underline" color="oklch(0.71 0.17 138)" strokeWidth={2.5} animationDuration={800} isView>
+                <Highlighter action="underline" color="oklch(0.71 0.17 138)" strokeWidth={2.5} animationDuration={800} isView drawDelay={900}>
                   environmental action.
                 </Highlighter>
               </h2>

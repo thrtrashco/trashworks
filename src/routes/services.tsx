@@ -24,11 +24,11 @@ function ServicesPage(){return <main>
 
 {/* HERO */}
 <section className="relative flex min-h-[100svh] flex-col justify-end overflow-hidden bg-dark pb-12 pt-24 text-dark-foreground sm:min-h-[700px] sm:pb-20 sm:pt-32 lg:min-h-[820px] lg:block lg:justify-normal">
-  <video autoPlay muted loop playsInline className="absolute inset-0 z-0 hidden h-full w-full object-cover opacity-40 sm:block">
-    <source src="https://res.cloudinary.com/drvug594q/video/upload/v1790108289/HERO_sjsvhx.mp4" type="video/mp4" />
+  <video autoPlay muted loop playsInline preload="auto" className="absolute inset-0 z-0 hidden h-full w-full object-cover opacity-40 sm:block">
+    <source src="https://res.cloudinary.com/drvug594q/video/upload/q_auto,vc_auto/v1790108289/HERO_sjsvhx.mp4" type="video/mp4" />
   </video>
-  <video autoPlay muted loop playsInline className="absolute inset-0 z-0 h-full w-full object-cover opacity-40 sm:hidden">
-    <source src="https://res.cloudinary.com/drvug594q/video/upload/v1790108346/Change_video_dimensions_1080p_20260923014652_zdbtsa.mp4" type="video/mp4" />
+  <video autoPlay muted loop playsInline preload="auto" className="absolute inset-0 z-0 h-full w-full object-cover opacity-40 sm:hidden">
+    <source src="https://res.cloudinary.com/drvug594q/video/upload/q_auto,vc_auto/v1790108346/Change_video_dimensions_1080p_20260923014652_zdbtsa.mp4" type="video/mp4" />
   </video>
   <div className="absolute inset-0 z-[1] bg-dark/60" />
   <div className="site-container relative z-10 grid items-end gap-6 pt-6 sm:gap-12 sm:pt-10 lg:pt-20">
@@ -50,7 +50,7 @@ function ServicesPage(){return <main>
   <div className="site-container">
     <SectionHeading
       eyebrow="EPR categories"
-      titleNode={<>From obligation to{" "}<Highlighter action="underline" color="oklch(0.71 0.17 138)" strokeWidth={2.5} animationDuration={800} isView>evidence.</Highlighter></>}
+      titleNode={<>From obligation to{" "}<Highlighter action="underline" color="oklch(0.71 0.17 138)" strokeWidth={2.5} animationDuration={800} isView drawDelay={900}>evidence.</Highlighter></>}
       copy="We coordinate each stage—from applicability and registration through fulfilment, filing and audit support."
     />
     <div className="mt-14 grid auto-rows-[280px] gap-3 md:grid-cols-2 lg:grid-cols-3">
@@ -78,7 +78,7 @@ function ServicesPage(){return <main>
     <SectionHeading
       inverse
       eyebrow="Beyond EPR"
-      titleNode={<>Environmental systems,{" "}<Highlighter action="underline" color="oklch(0.71 0.17 138)" strokeWidth={2.5} animationDuration={800} isView>joined up.</Highlighter></>}
+      titleNode={<>Environmental systems,{" "}<Highlighter action="underline" color="oklch(0.71 0.17 138)" strokeWidth={2.5} animationDuration={800} isView drawDelay={900}>joined up.</Highlighter></>}
       copy="Additional support for environmental services, waste management and other compliances—designed around your actual operations."
     />
     <div className="grid gap-3">
@@ -99,7 +99,7 @@ function ServicesPage(){return <main>
       <p className="text-xs font-bold uppercase tracking-[0.18em]">Your next filing starts here</p>
       <h2 className="mt-5 max-w-3xl font-display text-5xl font-bold leading-none">
         Build a{" "}
-        <Highlighter action="underline" color="oklch(0.16 0.02 130)" strokeWidth={3} animationDuration={800} isView>
+        <Highlighter action="underline" color="oklch(0.16 0.02 130)" strokeWidth={3} animationDuration={800} isView drawDelay={900}>
           cleaner compliance
         </Highlighter>{" "}path.
       </h2>

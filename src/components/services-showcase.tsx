@@ -170,7 +170,7 @@ export function ServicesShowcase() {
             )}
           >
             Our{" "}
-            <Highlighter action="underline" color="oklch(0.71 0.17 138)" strokeWidth={2.5} animationDuration={800} isView>
+            <Highlighter action="underline" color="oklch(0.71 0.17 138)" strokeWidth={2.5} animationDuration={800} isView drawDelay={900}>
               Services
             </Highlighter>
           </h2>
