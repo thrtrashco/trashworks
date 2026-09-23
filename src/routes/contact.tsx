@@ -27,7 +27,7 @@ export const Route = createFileRoute("/contact")({
       { name: "robots", content: "index, follow" },
       { property: "og:title", content: "Contact Us | EPR Compliance Team, Goa — the trash co." },
       { property: "og:description", content: "Get in touch for EPR registration, compliance support or recycled polymer sourcing. Goa-based, serving businesses across India." },
-      { property: "og:url", content: "https://thetrash.company/contact" },
+      { property: "og:url", content: "https://trashworks.in/contact" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Contact Us | EPR Compliance Team, Goa — the trash co." },

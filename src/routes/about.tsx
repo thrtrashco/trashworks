@@ -15,7 +15,7 @@ export const Route = createFileRoute("/about")({ head:()=>({meta:[
   {name:"robots",content:"index, follow"},
   {property:"og:title",content:"About Us | India's Circular Economy Partner — the trash co."},
   {property:"og:description",content:"From 2 clients in 2020 to 400+ today — the trash co. is building a tech-driven circular economy across India."},
-  {property:"og:url",content:"https://thetrash.company/about"},
+  {property:"og:url",content:"https://trashworks.in/about"},
   {property:"og:type",content:"website"},
   {name:"twitter:card",content:"summary_large_image"},
   {name:"twitter:title",content:"About Us | India's Circular Economy Partner — the trash co."},

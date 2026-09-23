@@ -13,7 +13,7 @@ export const Route=createFileRoute("/services")({head:()=>({meta:[
   {name:"robots",content:"index, follow"},
   {property:"og:title",content:"EPR Services — Plastic, Battery, E-Waste & Tyre Compliance | the trash co."},
   {property:"og:description",content:"End-to-end EPR registration, fulfilment and audit support for Plastic, Battery, E-Waste and Tyre EPR across India."},
-  {property:"og:url",content:"https://thetrash.company/services"},
+  {property:"og:url",content:"https://trashworks.in/services"},
   {property:"og:type",content:"website"},
   {name:"twitter:card",content:"summary_large_image"},
   {name:"twitter:title",content:"EPR Services — Plastic, Battery, E-Waste & Tyre Compliance | the trash co."},

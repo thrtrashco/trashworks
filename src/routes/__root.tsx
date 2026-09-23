@@ -108,9 +108,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" },
       { rel: "icon", href: "https://res.cloudinary.com/drvug594q/image/upload/v1790112161/copy_of_logotc_qumlil.png", type: "image/png" },
-      { rel: "canonical", href: "https://thetrash.company" },
+      { rel: "canonical", href: "https://trashworks.in" },
     ],
     scripts: [
+      /* ── Google Analytics 4 ── */
+      {
+        src: "https://www.googletagmanager.com/gtag/js?id=G-GZV8HGQ3KR",
+        async: true,
+      },
+      {
+        children: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-GZV8HGQ3KR');`,
+      },
+      /* ── JSON-LD Structured Data ── */
       {
         type: "application/ld+json",
         children: JSON.stringify({
@@ -118,10 +127,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@graph": [
             {
               "@type": "Organization",
-              "@id": "https://thetrash.company/#organization",
+              "@id": "https://trashworks.in/#organization",
               "name": "the trash co.",
               "legalName": "Trashworks Technologies Private Limited",
-              "url": "https://thetrash.company",
+              "url": "https://trashworks.in",
               "logo": "https://res.cloudinary.com/drvug594q/image/upload/v1790112161/copy_of_logotc_qumlil.png",
               "foundingDate": "2020",
               "description": "Tech-enabled EPR compliance, plastic waste channelisation and recycled PCR polymers for Indian businesses.",
@@ -146,14 +155,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
                   "addressCountry": "IN"
                 }
               ],
-              "sameAs": ["https://thetrash.co.in"]
+              "sameAs": [
+                "https://trashworks.in",
+                "https://thetrash.company",
+                "https://thetrash.co.in"
+              ]
             },
             {
               "@type": "LocalBusiness",
-              "@id": "https://thetrash.company/#localbusiness",
+              "@id": "https://trashworks.in/#localbusiness",
               "name": "the trash co.",
               "image": "https://res.cloudinary.com/drvug594q/image/upload/v1790112161/copy_of_logotc_qumlil.png",
-              "url": "https://thetrash.company",
+              "url": "https://trashworks.in",
               "telephone": "+91-8275073790",
               "email": "hello@thetrash.company",
               "priceRange": "₹₹",
@@ -172,7 +185,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
                 "latitude": 15.4909,
                 "longitude": 73.8278
               },
-              "hasMap": "https://maps.google.com/?q=Panaji,Goa,India"
+              "hasMap": "https://www.google.com/maps/place/Trashworks+Technologies+Pvt+Ltd/@15.2968078,73.9552618,17z"
             }
           ]
         })

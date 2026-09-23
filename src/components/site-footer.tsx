@@ -43,12 +43,12 @@ export function SiteFooter() {
             the trash co. · enabling circular economy across india
           </p>
           <a
-            href="https://thetrash.co.in"
+            href="https://trashworks.in"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden items-center gap-1 text-xs text-dark-muted transition-colors hover:text-dark-foreground sm:inline-flex"
           >
-            thetrash.co.in <ArrowUpRight className="size-3" />
+            trashworks.in <ArrowUpRight className="size-3" />
           </a>
         </div>
       </div>
@@ -203,12 +203,12 @@ export function SiteFooter() {
             © 2026 the trash co. All rights reserved.
           </p>
           <a
-            href="https://thetrash.co.in"
+            href="https://trashworks.in"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 text-xs text-dark-muted transition-colors hover:text-dark-foreground"
           >
-            thetrash.co.in <ArrowUpRight className="size-3" />
+            trashworks.in <ArrowUpRight className="size-3" />
           </a>
         </div>
       </div>

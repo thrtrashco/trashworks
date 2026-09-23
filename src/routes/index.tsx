@@ -22,7 +22,7 @@ export const Route = createFileRoute("/")({
       { name: "robots", content: "index, follow" },
       { property: "og:title", content: "the trash co. | EPR Compliance & Circular Economy Partner, Goa" },
       { property: "og:description", content: "Goa-based EPR compliance and circular economy company. Plastic, battery, e-waste & tyre EPR — 400+ clients, 26 states." },
-      { property: "og:url", content: "https://thetrash.company/" },
+      { property: "og:url", content: "https://trashworks.in/" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "the trash co. | EPR Compliance & Circular Economy Partner, Goa" },

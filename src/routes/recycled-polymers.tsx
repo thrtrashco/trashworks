@@ -14,7 +14,7 @@ export const Route=createFileRoute("/recycled-polymers")({head:()=>({meta:[
   {name:"robots",content:"index, follow"},
   {property:"og:title",content:"Recycled PCR Polymers for Packaging & Automotive | the trash co."},
   {property:"og:description",content:"High-grade PCR granules for rigid, flexible packaging, automotive and consumer goods — sourced with quality and traceability."},
-  {property:"og:url",content:"https://thetrash.company/recycled-polymers"},
+  {property:"og:url",content:"https://trashworks.in/recycled-polymers"},
   {property:"og:type",content:"website"},
   {name:"twitter:card",content:"summary_large_image"},
   {name:"twitter:title",content:"Recycled PCR Polymers for Packaging & Automotive | the trash co."},
