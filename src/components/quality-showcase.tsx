@@ -252,19 +252,7 @@ export function AevumEcoplastShowcase() {
         </Reveal>
 
         {/* ── Roofing product ── */}
-        <Reveal delay={80} className="mt-4 sm:mt-6">
-          <div className="group relative h-full min-h-[260px] overflow-hidden rounded-2xl border border-dark-foreground/15 sm:min-h-[320px]">
-            <img src="/aevum/roofing-sheets.jpg" alt="Extruded high strength roofing sheets and boards" loading="lazy" className="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-dark/10" />
-            <span className="absolute left-3 top-3 flex items-center gap-1.5 rounded-full border border-dark-foreground/25 bg-dark/60 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] text-dark-foreground backdrop-blur-sm sm:left-4 sm:top-4 sm:text-[11px]">
-              <Layers className="size-3" />Finished Product
-            </span>
-            <div className="absolute inset-x-0 bottom-0 p-4 sm:p-6">
-              <h3 className="font-display text-base font-bold leading-tight sm:text-2xl">Extruded High Strength Roofing Sheets & Boards</h3>
-              <p className="mt-1 text-xs leading-5 text-dark-muted sm:text-sm">Made from low-value and multilayer packaging that's otherwise difficult to recycle.</p>
-            </div>
-          </div>
-        </Reveal>
+
 
       </div>
     </section>
