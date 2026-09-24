@@ -55,18 +55,25 @@ const trustPoints = [
 
 const offices = [
   {
+    tag: "Ahmedabad Office",
+    entity: "The Trash Company",
+    lines: ["411, Shivam Arcade, Near Satva Galaxy,", "Ahmedabad, Gujarat 382330"],
+    note: "અમદાવાદ, ગુજરાતમાં પણ અમારી ઓફિસ છે — તમારો સંપર્ક કરવા અમે આતુર છીએ.",
+    mapUrl: "https://www.google.com/maps/place/The+Trash+Company/@23.0384171,72.3763663,12z/data=!4m10!1m2!2m1!1strash+co+ahehmdabad!3m6!1s0x395e84b6e4555555:0x487fbf83e51a169f!8m2!3d23.0384171!4d72.5288016!15sChJ0cmFzaCBjbyBhaG1lZGFiYWSSARh3YXN0ZV9tYW5hZ2VtZW50X3NlcnZpY2XgAQA!16s%2Fg%2F11w7fnb1jc?entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D",
+  },
+  {
     tag: "Goa Office",
     entity: "Trashworks Technologies Pvt. Ltd.",
-    lines: ["201 Shanta Building, 18th June Road,", "Panaji, Goa 403001"],
+    lines: ["EHN 10, 322/1, Rasai,", "Loutolim Salcete, Goa 403718"],
     note: null as string | null,
     mapUrl: "https://www.google.com/maps/place/Trashworks+Technologies+Pvt+Ltd/@15.2968078,73.9552618,17z/data=!3m1!4b1!4m6!3m5!1s0x3bbfb15d138030af:0x8f9454c60a08c40c!8m2!3d15.2968078!4d73.9578367!16s%2Fg%2F11w9s9n_yx?entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D",
   },
   {
-    tag: "Ahmedabad Office",
-    entity: "The Trash Company",
-    lines: ["B401, Lakeview Towers, Vastrapur,", "Ahmedabad, Gujarat 380015"],
-    note: "અમદાવાદ, ગુજરાતમાં પણ અમારી ઓફિસ છે — તમારો સંપર્ક કરવા અમે આતુર છીએ.",
-    mapUrl: "https://www.google.com/maps/place/The+Trash+Company/@23.0384171,72.3763663,12z/data=!4m10!1m2!2m1!1strash+co+ahehmdabad!3m6!1s0x395e84b6e4555555:0x487fbf83e51a169f!8m2!3d23.0384171!4d72.5288016!15sChJ0cmFzaCBjbyBhaG1lZGFiYWSSARh3YXN0ZV9tYW5hZ2VtZW50X3NlcnZpY2XgAQA!16s%2Fg%2F11w7fnb1jc?entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D",
+    tag: "Manufacturing Unit",
+    entity: "Aevum Ecoplast LLP",
+    lines: ["EHN 10, 322/1, Rasai,", "Loutolim Salcete, Goa 403718"],
+    note: null as string | null,
+    mapUrl: "https://www.google.com/maps/place/Trashworks+Technologies+Pvt+Ltd/@15.2968078,73.9552618,17z/data=!3m1!4b1!4m6!3m5!1s0x3bbfb15d138030af:0x8f9454c60a08c40c!8m2!3d15.2968078!4d73.9578367!16s%2Fg%2F11w9s9n_yx?entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D",
   },
 ];
 
@@ -188,8 +195,8 @@ function ContactPage() {
                 <div className="mt-5 flex gap-3 border-t border-light-border pt-5">
                   <MapPin className="mt-0.5 size-4 shrink-0 text-primary-dark" />
                   <p className="text-sm leading-6 text-muted-foreground">
-                    Registered offices —{" "}
-                    <strong className="text-foreground">Panaji, Goa</strong> &{" "}
+                    Offices in{" "}
+                    <strong className="text-foreground">Loutolim, Goa</strong> &{" "}
                     <strong className="text-foreground">Ahmedabad, Gujarat</strong>
                   </p>
                 </div>
@@ -316,7 +323,7 @@ function ContactPage() {
           <Reveal className="mb-10 sm:mb-14">
             <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-primary">Where we are</p>
             <h2 className="mt-2 font-display text-3xl font-extrabold sm:text-4xl lg:text-5xl">
-              Two offices.{" "}
+              Three offices.{" "}
               <Highlighter action="underline" color="oklch(0.71 0.17 138)" strokeWidth={2.5} animationDuration={800} isView drawDelay={900}>
                 One mission.
               </Highlighter>
@@ -326,7 +333,7 @@ function ContactPage() {
             </p>
           </Reveal>
 
-          <div className="grid gap-5 sm:grid-cols-2 sm:gap-6">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6">
             {offices.map(({ tag, entity, lines, note, mapUrl }, i) => (
               <Reveal
                 key={tag}

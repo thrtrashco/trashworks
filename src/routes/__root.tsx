@@ -109,6 +109,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" },
       { rel: "icon", href: "https://res.cloudinary.com/drvug594q/image/upload/v1790112161/copy_of_logotc_qumlil.png", type: "image/png" },
       { rel: "canonical", href: "https://trashworks.in" },
+      { rel: "sitemap", type: "application/xml", href: "https://trashworks.in/sitemap.xml" },
     ],
     scripts: [
       /* ── Google Analytics 4 ── */
@@ -140,18 +141,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               "address": [
                 {
                   "@type": "PostalAddress",
-                  "streetAddress": "201 Shanta Building, 18th June Road",
-                  "addressLocality": "Panaji",
+                  "streetAddress": "EHN 10, 322/1, Rasai",
+                  "addressLocality": "Loutolim Salcete",
                   "addressRegion": "Goa",
-                  "postalCode": "403001",
+                  "postalCode": "403718",
                   "addressCountry": "IN"
                 },
                 {
                   "@type": "PostalAddress",
-                  "streetAddress": "B401, Lakeview Towers, Vastrapur",
+                  "streetAddress": "411, Shivam Arcade, Near Satva Galaxy",
                   "addressLocality": "Ahmedabad",
                   "addressRegion": "Gujarat",
-                  "postalCode": "380015",
+                  "postalCode": "382330",
                   "addressCountry": "IN"
                 }
               ],
@@ -174,10 +175,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               "openingHours": "Mo-Fr 09:00-18:00",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "201 Shanta Building, 18th June Road",
-                "addressLocality": "Panaji",
+                "streetAddress": "EHN 10, 322/1, Rasai",
+                "addressLocality": "Loutolim Salcete",
                 "addressRegion": "Goa",
-                "postalCode": "403001",
+                "postalCode": "403718",
                 "addressCountry": "IN"
               },
               "geo": {
