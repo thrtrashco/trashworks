@@ -25,14 +25,9 @@ const values=["Customer Excellence","Integrity","Trust","Reliability","Transpare
 const team=[
   {name:"Rajay Rasaikar",role:"Co-Founder",email:"rajay@thetrash.company",phone:"+91 98231 63790",img:"https://res.cloudinary.com/drvug594q/image/upload/v1790114467/Screenshot_2026-09-23_at_3.25.29_AM.png_20260923033037_erasio_lyxq0h.png"},
   {name:"Deep Dalsania",role:"Co-Founder",email:"deep@thetrash.company",phone:"+91 95372 31876",img:"https://res.cloudinary.com/drvug594q/image/upload/v1790114299/Screenshot_2026-09-23_at_3.25.38_AM_ytaod1.png"},
-  {name:"Arushi Thakur",role:"Compliance Head",email:"arushi@thetrash.company",phone:"+91 98342 04825",img:"https://res.cloudinary.com/drvug594q/image/upload/v1790114299/Screenshot_2026-09-23_at_3.25.44_AM_ciny75.png"},
-  {name:"Dakshata Jain",role:"Business Development Manager",email:"dakshata@thetrash.company",phone:"+91 84598 30559",img:"https://res.cloudinary.com/drvug594q/image/upload/v1790114299/Screenshot_2026-09-23_at_3.25.49_AM_hoobv0.png"},
-  {name:"Nisanth Nan",role:"Head of Operations",email:"nisanth@thetrash.company",phone:"+91 82750 74017",img:"https://res.cloudinary.com/drvug594q/image/upload/v1790114300/Screenshot_2026-09-23_at_3.25.55_AM_f7s03o.png"},
-  {name:"Raj Koradia",role:"Operations Head",email:"raj@thetrash.company",phone:"+91 79902 40140",img:"https://res.cloudinary.com/drvug594q/image/upload/v1790114837/Screenshot_2026-09-23_at_3.26.00_AM.png_20260923033443_erasio_dhoffh.png"},
   {name:"Anjali Sapam",role:"Head of Marketing",email:"anjali@thetrash.company",phone:"+91 80804 59951",img:"https://res.cloudinary.com/drvug594q/image/upload/v1790114304/Screenshot_2026-09-23_at_3.26.11_AM_jprj1d.png"},
   {name:"Twinkle Rokad",role:"Sr. Compliance Executive",email:"twinkle.rokad@thetrash.company",phone:"+91 89990 00013",img:"https://res.cloudinary.com/drvug594q/image/upload/v1790114305/Screenshot_2026-09-23_at_3.26.16_AM_mk3oqq.png"},
   {name:"Shirsha Rasoor",role:"Sr. Compliance Executive",email:"shirsha.rasoor@thetrash.company",phone:"+91 89994 60065",img:"https://res.cloudinary.com/drvug594q/image/upload/v1790114306/Screenshot_2026-09-23_at_3.26.20_AM_tneayf.png"},
-  {name:"Shreya Ghosh",role:"Compliance Executive",email:"shreya@thetrash.company",phone:"+91 93569 48614",img:"https://res.cloudinary.com/drvug594q/image/upload/v1790114342/Screenshot_2026-09-23_at_3.26.25_AM_hmulai.png"},
   {name:"Darshana Bhatt",role:"Administrative Assistant",email:"darshana@thetrash.company",phone:"+91 90334 60610",img:"https://res.cloudinary.com/drvug594q/image/upload/v1790114344/Screenshot_2026-09-23_at_3.26.29_AM_w0pjnh.png"},
 ];
 function AboutPage(){return <main>

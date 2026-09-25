@@ -23,7 +23,7 @@ export const Route = createFileRoute("/contact")({
     meta: [
       { title: "Contact Us | EPR Compliance Team, Goa — the trash co." },
       { name: "description", content: "Get in touch with the trash co. for EPR registration, compliance support or recycled polymer sourcing. Goa-based team serving businesses across 26 states in India." },
-      { name: "keywords", content: "EPR compliance consultant contact, talk to circular economy team India, EPR consultancy Goa contact, circular economy company Goa, waste management company Goa contact, hello@thetrash.company" },
+      { name: "keywords", content: "EPR compliance consultant contact, talk to circular economy team India, EPR consultancy Goa contact, circular economy company Goa, waste management company Goa contact, hello@trashworks.in" },
       { name: "robots", content: "index, follow" },
       { property: "og:title", content: "Contact Us | EPR Compliance Team, Goa — the trash co." },
       { property: "og:description", content: "Get in touch for EPR registration, compliance support or recycled polymer sourcing. Goa-based, serving businesses across India." },
@@ -71,9 +71,9 @@ const offices = [
   {
     tag: "Manufacturing Unit",
     entity: "Aevum Ecoplast LLP",
-    lines: ["EHN 10, 322/1, Rasai,", "Loutolim Salcete, Goa 403718"],
+    lines: ["411, Shivam Arcade, Near Satva Galaxy,", "Ahmedabad, Gujarat 382330"],
     note: null as string | null,
-    mapUrl: "https://www.google.com/maps/place/Trashworks+Technologies+Pvt+Ltd/@15.2968078,73.9552618,17z/data=!3m1!4b1!4m6!3m5!1s0x3bbfb15d138030af:0x8f9454c60a08c40c!8m2!3d15.2968078!4d73.9578367!16s%2Fg%2F11w9s9n_yx?entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D",
+    mapUrl: "https://www.google.com/maps/place/The+Trash+Company/@23.0384171,72.3763663,12z/data=!4m10!1m2!2m1!1strash+co+ahehmdabad!3m6!1s0x395e84b6e4555555:0x487fbf83e51a169f!8m2!3d23.0384171!4d72.5288016!15sChJ0cmFzaCBjbyBhaG1lZGFiYWSSARh3YXN0ZV9tYW5hZ2VtZW50X3NlcnZpY2XgAQA!16s%2Fg%2F11w7fnb1jc?entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D",
   },
 ];
 
@@ -171,25 +171,19 @@ function ContactPage() {
                 <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-primary-dark">Reach us directly</p>
                 <div className="mt-4 space-y-3">
                   <a
-                    href="mailto:hello@thetrash.company"
+                    href="mailto:hello@trashworks.in"
                     className="flex items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
                   >
                     <Mail className="size-4 shrink-0 text-primary-dark" />
-                    hello@thetrash.company
+                    hello@trashworks.in
                   </a>
+                  
                   <a
-                    href="mailto:team@thetrash.company"
-                    className="flex items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
-                  >
-                    <Mail className="size-4 shrink-0 text-primary-dark" />
-                    team@thetrash.company
-                  </a>
-                  <a
-                    href="tel:+918459830559"
+                    href="tel:+918080459951"
                     className="flex items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
                   >
                     <Phone className="size-4 shrink-0 text-primary-dark" />
-                    +91 84598 30559
+                    +91 80804 59951
                   </a>
                 </div>
                 <div className="mt-5 flex gap-3 border-t border-light-border pt-5">

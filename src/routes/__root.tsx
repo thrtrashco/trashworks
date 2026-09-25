@@ -135,8 +135,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               "logo": "https://res.cloudinary.com/drvug594q/image/upload/v1790112161/copy_of_logotc_qumlil.png",
               "foundingDate": "2020",
               "description": "Tech-enabled EPR compliance, plastic waste channelisation and recycled PCR polymers for Indian businesses.",
-              "email": "hello@thetrash.company",
-              "telephone": "+91-8275073790",
+              "email": "hello@trashworks.in",
+              "telephone": "+91-8080459951",
               "areaServed": { "@type": "Country", "name": "India" },
               "address": [
                 {
@@ -168,8 +168,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               "name": "the trash co.",
               "image": "https://res.cloudinary.com/drvug594q/image/upload/v1790112161/copy_of_logotc_qumlil.png",
               "url": "https://trashworks.in",
-              "telephone": "+91-8275073790",
-              "email": "hello@thetrash.company",
+              "telephone": "+91-8080459951",
+              "email": "hello@trashworks.in",
               "priceRange": "₹₹",
               "currenciesAccepted": "INR",
               "openingHours": "Mo-Fr 09:00-18:00",
