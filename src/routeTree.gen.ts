@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as LeadsRouteImport } from './routes/leads'
 import { Route as OurWorkRouteImport } from './routes/our-work'
 import { Route as RecycledPolymersRouteImport } from './routes/recycled-polymers'
 import { Route as ServicesRouteImport } from './routes/services'
@@ -37,6 +38,11 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LeadsRoute = LeadsRouteImport.update({
+  id: '/leads',
+  path: '/leads',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const OurWorkRoute = OurWorkRouteImport.update({
   id: '/our-work',
   path: '/our-work',
@@ -58,6 +64,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
+  '/leads': typeof LeadsRoute
   '/our-work': typeof OurWorkRoute
   '/recycled-polymers': typeof RecycledPolymersRoute
   '/services': typeof ServicesRoute
@@ -67,6 +74,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
+  '/leads': typeof LeadsRoute
   '/our-work': typeof OurWorkRoute
   '/recycled-polymers': typeof RecycledPolymersRoute
   '/services': typeof ServicesRoute
@@ -77,6 +85,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
+  '/leads': typeof LeadsRoute
   '/our-work': typeof OurWorkRoute
   '/recycled-polymers': typeof RecycledPolymersRoute
   '/services': typeof ServicesRoute
@@ -88,6 +97,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/blog'
     | '/contact'
+    | '/leads'
     | '/our-work'
     | '/recycled-polymers'
     | '/services'
@@ -97,6 +107,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/blog'
     | '/contact'
+    | '/leads'
     | '/our-work'
     | '/recycled-polymers'
     | '/services'
@@ -106,6 +117,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/blog'
     | '/contact'
+    | '/leads'
     | '/our-work'
     | '/recycled-polymers'
     | '/services'
@@ -116,6 +128,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   BlogRoute: typeof BlogRoute
   ContactRoute: typeof ContactRoute
+  LeadsRoute: typeof LeadsRoute
   OurWorkRoute: typeof OurWorkRoute
   RecycledPolymersRoute: typeof RecycledPolymersRoute
   ServicesRoute: typeof ServicesRoute
@@ -151,6 +164,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/leads': {
+      id: '/leads'
+      path: '/leads'
+      fullPath: '/leads'
+      preLoaderRoute: typeof LeadsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/our-work': {
       id: '/our-work'
       path: '/our-work'
@@ -180,6 +200,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   BlogRoute: BlogRoute,
   ContactRoute: ContactRoute,
+  LeadsRoute: LeadsRoute,
   OurWorkRoute: OurWorkRoute,
   RecycledPolymersRoute: RecycledPolymersRoute,
   ServicesRoute: ServicesRoute,
