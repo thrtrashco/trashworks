@@ -55,6 +55,36 @@ export const submitLead = createServerFn({ method: "POST" })
       });
 
       console.log("[submitLead] Inserted:", result.insertedId.toString());
+
+      // Send email notification via Resend
+      const resendApiKey = process.env["RESEND_API_KEY"];
+      if (resendApiKey) {
+        const { Resend } = await import("resend");
+        const resend = new Resend(resendApiKey);
+
+        await resend.emails.send({
+          from: "The Trash Co Website <hello@trashworks.in>",
+          to: "hello@trashworks.in",
+          replyTo: data.email,
+          subject: `New lead (${data.source}): ${data.name}`,
+          text: [
+            `Name: ${data.name}`,
+            `Email: ${data.email}`,
+            `Company: ${data.company || "—"}`,
+            `Phone: ${data.countryCode} ${data.phone}`,
+            `Service: ${data.service}`,
+            `Source: ${data.source}`,
+            ``,
+            `Message:`,
+            data.message,
+          ].join("\n"),
+        });
+
+        console.log("[submitLead] Email sent via Resend.");
+      } else {
+        console.warn("[submitLead] RESEND_API_KEY not set — skipping email.");
+      }
+
       return { success: true, id: result.insertedId.toString() };
     } finally {
       await client.close();
