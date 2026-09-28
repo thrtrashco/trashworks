@@ -49,7 +49,7 @@ function AboutPage(){return <main>
         A circular economy<br className="hidden sm:block" /> needs clear<br className="hidden sm:block" /> connections.
       </h1>
       <p className="mt-5 max-w-xl text-sm leading-6 text-dark-muted sm:mt-10 sm:text-lg sm:leading-8">
-        We connect businesses, regulation, recyclers and high-quality materials through a system built around transparency, trust and trash.
+        We connect businesses, regulation, recyclers and high quality materials through a system built around transparency, trust and trash.
       </p>
     </Reveal>
   </div>

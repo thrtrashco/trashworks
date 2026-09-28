@@ -107,44 +107,47 @@ function HomePage() {
  
       {/* TESTIMONIALS */}
       <section className="section-pad bg-background">
-        <div className="site-container">
-          <Reveal>
-            <SectionHeading
-              eyebrow="Trusted relationships"
-              title="Compliance feels simpler with the right team."
-              titleNode={<>Compliance feels <Highlighter action="underline" color="oklch(0.71 0.17 138)" strokeWidth={2.5} animationDuration={800} isView drawDelay={900}>simpler</Highlighter> with the right team.</>}
-            />
-          </Reveal>
-          <p className="mt-4 text-[11px] text-muted-foreground sm:mt-5 sm:text-xs">Representative client feedback, paraphrased for clarity.</p>
-          <div className="mt-8 grid grid-cols-2 gap-2.5 sm:mt-12 sm:gap-3 lg:grid-cols-5">
-            {testimonials.map((item, index) => (
-              <Reveal
-                key={item.company}
-                delay={index * 50}
-                className={cn("border border-light-border bg-light-surface p-4 sm:p-6", index === 0 && "col-span-2 lg:col-span-1")}
-              >
-                <div className="flex gap-0.5 text-primary-dark" aria-label="5 out of 5 stars">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="size-3 fill-current" />
-                  ))}
-                </div>
-                <Quote className="mt-5 size-5 text-primary sm:mt-8 sm:size-7" />
-                <blockquote className="mt-3 line-clamp-4 text-xs leading-5 sm:mt-4 sm:line-clamp-none sm:text-sm sm:leading-6">
-                  "{item.quote}"
-                </blockquote>
-                <div className="mt-5 border-t border-light-border pt-3 sm:mt-7 sm:pt-4">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.08em] sm:text-xs sm:tracking-[0.1em]">
-                    {item.name ?? item.company}
-                  </p>
-                  {item.position && (
-                    <p className="mt-0.5 text-[10px] text-muted-foreground sm:text-xs">{item.position}</p>
-                  )}
-                </div>
-              </Reveal>
+  <div className="site-container">
+    <Reveal>
+      <SectionHeading
+        eyebrow="Trusted relationships"
+        title="Compliance feels simpler with the right team."
+        titleNode={<>Compliance feels <Highlighter action="underline" color="oklch(0.71 0.17 138)" strokeWidth={2.5} animationDuration={800} isView drawDelay={900}>simpler</Highlighter> with the right team.</>}
+      />
+    </Reveal>
+    <p className="mt-4 text-[11px] text-muted-foreground sm:mt-5 sm:text-xs">Representative client feedback, paraphrased for clarity.</p>
+    <div className="mt-8 grid grid-cols-2 gap-2.5 sm:mt-12 sm:gap-3 lg:grid-cols-5">
+      {testimonials.map((item, index) => (
+        <Reveal
+          key={item.company}
+          delay={index * 50}
+          className={cn(
+            "flex h-full flex-col border border-light-border bg-light-surface p-4 sm:p-6",
+            index === 0 && "col-span-2 lg:col-span-1"
+          )}
+        >
+          <div className="flex gap-0.5 text-primary-dark" aria-label="5 out of 5 stars">
+            {Array.from({ length: 5 }).map((_, i) => (
+              <Star key={i} className="size-3 fill-current" />
             ))}
           </div>
-        </div>
-      </section>
+          <Quote className="mt-5 size-5 text-primary sm:mt-8 sm:size-7" />
+          <blockquote className="mb-5 mt-3 line-clamp-4 text-xs leading-5 sm:mb-7 sm:mt-4 sm:line-clamp-none sm:text-sm sm:leading-6">
+            "{item.quote}"
+          </blockquote>
+          <div className="mt-auto min-h-[3.75rem] border-t border-light-border pt-3 sm:min-h-[4.25rem] sm:pt-4">
+            <p className="text-[10px] font-bold uppercase tracking-[0.08em] sm:text-xs sm:tracking-[0.1em]">
+              {item.name ?? item.company}
+            </p>
+            {item.position && (
+              <p className="mt-0.5 text-[10px] text-muted-foreground sm:text-xs">{item.position}</p>
+            )}
+          </div>
+        </Reveal>
+      ))}
+    </div>
+  </div>
+</section>
 
      
 

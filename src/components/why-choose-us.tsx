@@ -4,21 +4,21 @@ import { Highlighter } from "@/components/ui/highlighter";
 const features = [
   {
     label: "Our Mission",
-    title: "Building a tech-driven Circular Economy",
+    title: "Building a tech driven Circular Economy",
     description:
-      "We believe in harnessing the power of innovation while forging a path towards sustainability — integrating cutting-edge technology and visionary strategies to transform waste into opportunity and pave the path to a balanced future.",
+      "We believe in harnessing the power of innovation while forging a path towards sustainability integrating cutting edge technology and visionary strategies to transform waste into opportunity and pave the path to a balanced future.",
   },
   {
     label: "Our Vision",
     title: "Building an impactful organisation for a circular economy",
     description:
-      "Driven by a simple yet powerful vision, we believe in a world where resources are valued, reused and recycled — creating sustainable solutions for generations to come.",
+      "Driven by a simple yet powerful vision, we believe in a world where resources are valued, reused and recycled creating sustainable solutions for generations to come.",
   },
   {
     label: "The Growth Graph",
     title: "From 2 clients to 400+, built on trust",
     description:
-      "We began operations in October 2020 with minimal investment, starting with 2 clients for EPR consultation. More than 50% of our clients now come through referrals — a testament to our transparency and customer satisfaction.",
+      "We began operations in October 2020 with minimal investment, starting with 2 clients for EPR consultation. More than 50% of our clients now come through referrals a testament to our transparency and customer satisfaction.",
   },
 ];
 

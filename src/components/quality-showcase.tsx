@@ -19,7 +19,7 @@ const GRADES: Grade[] = [
   {
     id: "pcr",
     label: "PP Jumbo Bags",
-    source: "Post-use PP Jumbo Bags / FIBC woven fabric",
+    source: "Post use PP Jumbo Bags / FIBC woven fabric",
     image: "https://res.cloudinary.com/kxwxpxuv/image/upload/q_auto,f_auto/v1790284055/Granules_in_bowl_2K_20260925023703.jpg",
     specs: [
       { label: "MFI (230°C, 2.16kg)", value: "8 g/10 min" },
@@ -32,7 +32,7 @@ const GRADES: Grade[] = [
   {
     id: "leno",
     label: "Leno Bag Grade",
-    source: "Post-use PP Leno bags — onion / potato mesh packaging",
+    source: "Post use PP Leno bags  onion / potato mesh packaging",
     image: "https://res.cloudinary.com/kxwxpxuv/image/upload/q_auto,f_auto/v1790284260/Granules_in_bowl_2K_20260925024045.jpg",
     specs: [
       { label: "MFI (230°C, 2.16kg)", value: "9–11 g/10 min" },
@@ -180,7 +180,7 @@ export function AevumEcoplastShowcase() {
             </div>
             <div>
               <h2 className="font-display text-2xl font-extrabold leading-[1.1] sm:text-5xl sm:leading-[1.05]">
-                Turning hard-to-recycle plastic into{" "}
+                Turning hard to recycle plastic into{" "}
                 <Highlighter action="underline" color="oklch(0.71 0.17 138)" strokeWidth={2.5} animationDuration={800} isView drawDelay={900}>
                   usable material.
                 </Highlighter>

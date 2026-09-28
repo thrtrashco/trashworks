@@ -190,7 +190,7 @@ function ContactPage() {
                   <MapPin className="mt-0.5 size-4 shrink-0 text-primary-dark" />
                   <p className="text-sm leading-6 text-muted-foreground">
                     Offices in{" "}
-                    <strong className="text-foreground">Loutolim, Goa</strong> &{" "}
+                    <strong className="text-foreground">Goa</strong> &{" "}
                     <strong className="text-foreground">Ahmedabad, Gujarat</strong>
                   </p>
                 </div>
@@ -224,7 +224,7 @@ function ContactPage() {
                     </Highlighter>
                   </h2>
                   <p className="mt-1.5 text-sm text-dark-muted">
-                    We'll get back with a clear, practical next step — usually within 24 hours.
+                    Someone from our team will reply within 24 hours and explain how we can help.
                   </p>
                 </div>
 

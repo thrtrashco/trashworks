@@ -10,8 +10,8 @@ const services = [
     title: "Plastic Packaging EPR",
     category: "EPR Compliance",
     description:
-      "End-to-end compliance for rigid and flexible plastic packaging — from PIBO registration to category-wise credit fulfilment.",
-    features: ["PIBO Registration", "Category-wise Reporting", "Credit Fulfilment", "Audit Documentation"],
+      "We handle EPR compliance for rigid and flexible plastic packaging. PIBO registration, credit purchase, and filing, all taken care of.",
+    features: ["PIBO Registration", "Category wise Reporting", "Credit Fulfilment", "Audit Documentation"],
   },
   {
     id: 1,
@@ -19,7 +19,7 @@ const services = [
     title: "Battery EPR",
     category: "EPR Compliance",
     description:
-      "Producer registration and collection-target management for battery waste, backed by verified recycling certificates.",
+      "We register you as a battery producer, manage your collection targets, and get the recycling certificates to prove it.",
     features: ["Producer Registration", "Collection Targets", "Recycling Certificates", "Compliance Filing"],
   },
   {
@@ -28,7 +28,7 @@ const services = [
     title: "E-Waste EPR",
     category: "EPR Compliance",
     description:
-      "Authorised recycler tie-ups and traceable e-waste channelisation to meet extended producer responsibility targets.",
+      "We send your e-waste to authorised recyclers and keep the records, so you meet your EPR targets without chasing anyone.",
     features: ["Producer Registration", "Authorised Recycler Network", "E-Waste Tracking", "Annual Returns"],
   },
   {
@@ -37,7 +37,7 @@ const services = [
     title: "Tyre EPR",
     category: "EPR Compliance",
     description:
-      "Structured collection and recycling pathways for end-of-life tyres, coordinated with certified processing partners.",
+      "Old tyres get collected and sent to certified recyclers. We manage the whole process for you.",
     features: ["Producer Registration", "Recycling Partnerships", "Retreading Coordination", "Compliance Reporting"],
   },
   {
@@ -46,7 +46,7 @@ const services = [
     title: "EPR Credits",
     category: "EPR Compliance",
     description:
-      "Transparent credit trading and certificate verification, with real-time visibility across the CPCB portal.",
+      "We help you buy and sell EPR credits, check that every certificate is genuine, and keep track of it all on the CPCB portal.",
     features: ["Credit Trading", "Certificate Verification", "Portal Management", "Real-time Tracking"],
   },
 ];
@@ -180,7 +180,7 @@ export function ServicesShowcase() {
               hasBeenVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
             )}
           >
-            Five compliance streams, one operating system — built to turn regulation into a clear, auditable process.
+            Five compliance streams, one operating system built to turn regulation into a clear, auditable process.
           </p>
         </div>
 
