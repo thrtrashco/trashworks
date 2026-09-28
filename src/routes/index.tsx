@@ -59,7 +59,7 @@ function HomePage() {
               <span className="block">Trash.</span>
             </h1>
             <p className="mt-5 max-w-xl text-sm leading-6 text-dark-muted sm:mt-10 sm:text-lg sm:leading-8">
-              We connect regulation, recovery and recycled materials to make circularity work for Indian business.
+              We build systems that enable a circular economy through recovery, recycling and research.
             </p>
           </div>
         </div>
@@ -77,7 +77,7 @@ function HomePage() {
                 titleNode={<>Waste is not <Highlighter action="underline" color="oklch(0.71 0.17 138)" strokeWidth={2.5} animationDuration={800} isView drawDelay={900}>the end</Highlighter> of the line.</>}
               />
               <p className="max-w-xl text-sm leading-6 text-muted-foreground sm:text-lg sm:leading-7 lg:self-end lg:text-xl lg:leading-8">
-                It is a measurable material stream, a compliance responsibility and—managed well—a source of value. We build the systems that connect all three.
+                It is a valuable resource which is not designed for being reused or recycled and it must be the beginning of a new product.
               </p>
             </div>
           </Reveal>
@@ -132,9 +132,14 @@ function HomePage() {
                 <blockquote className="mt-3 line-clamp-4 text-xs leading-5 sm:mt-4 sm:line-clamp-none sm:text-sm sm:leading-6">
                   "{item.quote}"
                 </blockquote>
-                <p className="mt-5 border-t border-light-border pt-3 text-[10px] font-bold uppercase tracking-[0.08em] sm:mt-7 sm:pt-4 sm:text-xs sm:tracking-[0.1em]">
-                  {item.company}
-                </p>
+                <div className="mt-5 border-t border-light-border pt-3 sm:mt-7 sm:pt-4">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.08em] sm:text-xs sm:tracking-[0.1em]">
+                    {item.name ?? item.company}
+                  </p>
+                  {item.position && (
+                    <p className="mt-0.5 text-[10px] text-muted-foreground sm:text-xs">{item.position}</p>
+                  )}
+                </div>
               </Reveal>
             ))}
           </div>

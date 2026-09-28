@@ -4,7 +4,7 @@ export const navLinks = [
   { label: "Home", to: "/" },
   { label: "About Us", to: "/about" },
   { label: "Services", to: "/services" },
-  { label: "Recycled Polymers", to: "/recycled-polymers" },
+  { label: "Our Recycling", to: "/recycled-polymers" },
   { label: "Contact", to: "/contact" },
 ] as const;
 
@@ -25,10 +25,20 @@ export const services = [
 ];
 
 export const polymers = [
-  { name: "r.LDPE", note: "Natural", applications: "Heavy-duty films & sheets · lateral tube & pipe · impact modifier" },
-  { name: "r.HDPE", note: "High density", applications: "Plastic bottles · toiletry & cosmetic containers · extrusion sheets" },
-  { name: "PP Raffia", note: "Woven grade", applications: "Raffia tapes · woven sacks · monofilament · ropes" },
-  { name: "PPCP", note: "Copolymer", applications: "Furniture · appliances · automotive components · toys · caps & closures" },
+  {
+    name: "PP Jumbo Bags",
+    note: "Recycled PP Granules",
+    source: "Post-use PP Jumbo Bags / FIBC woven fabric",
+    applications: "Injection moulded products · crates & bins · pallets · extrusion profiles",
+    image: "https://res.cloudinary.com/kxwxpxuv/image/upload/q_auto,f_auto/v1790284055/Granules_in_bowl_2K_20260925023703.jpg",
+  },
+  {
+    name: "Leno Bag Grade",
+    note: "Recycled PP Granules",
+    source: "Post-use PP Leno bags — onion / potato mesh packaging",
+    applications: "Injection moulded products · crates & bins · flower pots & planters · extrusion profiles",
+    image: "https://res.cloudinary.com/kxwxpxuv/image/upload/q_auto,f_auto/v1790284260/Granules_in_bowl_2K_20260925024045.jpg",
+  },
 ];
 
 export const clients = [
@@ -39,11 +49,36 @@ export const clients = [
 ];
 
 export const testimonials = [
-  { company: "Gharda Chemicals", quote: "The team brought clarity to a complex EPR process and kept every submission moving with timely, precise documentation." },
-  { company: "Kaizen Industries", quote: "Professional, responsive and dependable. We always knew where our compliance work stood and what came next." },
-  { company: "Manufacturing client", quote: "Their practical guidance helped our internal teams align operations, records and regulatory requirements without disruption." },
-  { company: "Packaging client", quote: "A transparent partner for EPR credit fulfilment, with the traceability and documentation our audits demand." },
-  { company: "Pharmaceutical client", quote: "Consistent follow-through, quick resolution of queries and a level of ownership that is rare in compliance support." },
+  {
+    company: "Gharda Chemicals",
+    name: "Krishna Gade",
+    position: "Sr. Manager Import Purchase",
+    quote: "Working with The Trash Co. has been an absolute pleasure. Their knowledgeable team, through their expertise and dedication in navigating the complex regulation norms, helped us achieve our sustainable goals seamlessly. Their proactive approach and attention to detail have made a significant impact in reducing our liabilities. We recommend The Trash Company for exceptional Compliance Services.",
+  },
+  {
+    company: "EXIM Client",
+    name: "Vishal Sirsath",
+    position: "EXIM Documentation",
+    quote: "We would like to thank The Trash Co. for their good services regarding EPR certification and compliances. Since day one, the team's efforts on timely information, registration, data submission, new updates, documentation and communication are highly commendable. We wish to continue further engagement in the EPR process and are hopeful of the same level of service in future.",
+  },
+  {
+    company: "Kaizen Industries",
+    name: "Basant Kumar Laddha",
+    position: "Kaizen Industries",
+    quote: "The Trash Co. has provided exceptional support in assisting Kaizen Industries with EPR registration and filing work. They proved to be an invaluable partner throughout the entire process, showcasing their expertise and dedication. They meticulously guided us through the registration process, ensuring we fulfilled all necessary obligations and met the deadlines.",
+  },
+  {
+    company: "Finance Client",
+    name: "CA. Vipin Patni",
+    position: "Head - Finance",
+    quote: "It's been a wonderful journey with The Trash Co. for the last 1 year. The professional approach of the team in handling the compliance matters is truly appreciable. We are delighted to get our necessary compliances done from The Trash Co. and would definitely recommend further.",
+  },
+  {
+    company: "FMCG Client",
+    name: "Sumanta Das",
+    position: "Segment Development Manager - LGM-FMCG-South",
+    quote: "We are delighted to express our appreciation for the exceptional service provided by The Trash Co. Communication with them is seamless and effective. They listen attentively to our requirements, offer valuable insights, and maintain an open line of dialogue throughout our collaboration. Their integrity, transparency, and dedication to customer satisfaction are truly commendable.",
+  },
 ];
 
 export const support = [

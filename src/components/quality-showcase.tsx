@@ -18,7 +18,7 @@ type Grade = {
 const GRADES: Grade[] = [
   {
     id: "pcr",
-    label: "PCR Grade A",
+    label: "PP Jumbo Bags",
     source: "Post-use PP Jumbo Bags / FIBC woven fabric",
     image: "https://res.cloudinary.com/kxwxpxuv/image/upload/q_auto,f_auto/v1790284055/Granules_in_bowl_2K_20260925023703.jpg",
     specs: [
